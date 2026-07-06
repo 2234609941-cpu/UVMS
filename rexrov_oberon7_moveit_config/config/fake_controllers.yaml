@@ -1,0 +1,32 @@
+controller_list:
+  - name: fake_oberon7_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - azimuth
+      - shoulder
+      - elbow
+      - roll
+      - pitch
+      - wrist
+  - name: fake_finger_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - finger_left_joint
+      - finger_right_joint
+  - name: fake_uvms_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - virtual_joint
+      - azimuth
+      - shoulder
+      - elbow
+      - roll
+      - pitch
+      - wrist
+  - name: fake_floating_base_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - virtual_joint
+initial:  # Define initial robot poses per group
+  - group: oberon7_arm
+    pose: start
